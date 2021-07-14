@@ -34,3 +34,8 @@ func _physics_process(delta):
 	
 	move_and_slide(hvel + vvel, Vector3.UP, true)
 
+
+func _process(_delta):
+	if hvel != Vector3.ZERO:
+		$Mesh.look_at($Mesh.global_transform.origin + hvel, Vector3.UP)
+
