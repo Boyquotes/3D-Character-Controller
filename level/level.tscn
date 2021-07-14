@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://level/floor_material.tres" type="Material" id=1]
 [ext_resource path="res://level/box_material.tres" type="Material" id=2]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 12, 1, 12 )
@@ -60,3 +61,5 @@ material/0 = ExtResource( 2 )
 [node name="CollisionShape" type="CollisionShape" parent="Box3"]
 visible = false
 shape = SubResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
